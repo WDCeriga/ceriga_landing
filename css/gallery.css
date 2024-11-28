@@ -1,0 +1,131 @@
+.first-paragraph {
+    background-color: black;
+    padding-bottom: 100px;
+    padding-top: 150px;
+    margin: 0px auto;
+    flex-shrink: 0;
+    color: #FFF;
+    font-weight: 900;
+
+    .highlight-red {
+        font-weight: 700;
+        color: red;
+    }
+
+
+    .button-container {
+        position: relative;
+        margin-left: 8vw;
+        margin-top: -150px;
+        display: flex;
+        /* Enables flexbox for buttons */
+        gap: 8vw;
+    }
+
+    button {
+        width: 140px;
+        height: 50px;
+        background: #F00;
+        border-radius: 60px;
+        cursor: pointer;
+        border: none;
+        box-shadow: 0px 0px 0px 6px rgba(255, 149, 149, 0.30);
+        backdrop-filter: blur(20px);
+    }
+
+    .contactusbutton {
+        background: white;
+        color: #000;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0px 0px 0px 6px rgba(171, 171, 171, 0.3);
+        backdrop-filter: blur(20px);
+    }
+
+    .contactusbutton a {
+        color: #000;
+    }
+
+    button a {
+        cursor: pointer;
+        color: #FFF;
+        font-family: Koulen;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 250;
+        line-height: normal;
+        text-decoration: none;
+        letter-spacing: 0.7px;
+    }
+
+    h3 {
+        position: relative;
+        margin-left: 8vw;
+        font-size: 16px;
+        width: 70%;
+        margin-top: 40px;
+    }
+}
+
+.first_h1 {
+    font-size: 40px;
+    margin: 0 auto;
+    font-weight: 700;
+    width: calc(5rem + 40vw);
+    width: 45vw;
+    text-align: left;
+
+    @media screen and (max-width: 1200px) {
+        width: 70vw;
+        font-size: 28px;
+    }
+}
+
+/* Container styling */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5%;
+    justify-content: center;
+    width: 85%;
+    margin: 100px auto 200px;
+}
+
+/* Default column layout */
+.column, .column2 {
+    flex: 1 1 23%;
+    max-width: 23%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.column2 {
+    flex: 1 1 50%;
+    max-width: 50%;
+}
+
+/* Image styling */
+.column img, .column2 img {
+    width: 100%;
+    height: auto;
+    /* maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+    object-fit: cover;
+}
+
+
+/* Small screens: Stack images in a single-column grid */
+@media screen and (max-width: 900px) {
+    .row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .column, .column2 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
