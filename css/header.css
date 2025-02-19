@@ -167,10 +167,14 @@ header .container {
 
     }
 
-    #login{
+    #login {
         position: relative;
-        color: white;
-        right:-3vw;
+        color: rgb(255, 255, 255);
+        font-size: 22px;
+        display: block;
+        width: 0vw;
+        left: 2vw;
+        padding-left: 20px;
     }
 
     #logo {
